@@ -64,20 +64,16 @@ while (runProgram)
     }
 }
 
+Console.WriteLine("Would you like to see all students instead? y/n");
+if (Console.ReadLine() == "y")
+{
+    foreach (string n in names)
+    {
+        Console.WriteLine(n);
+    }
+}
+Console.WriteLine("Search by name: ");
+string searchString = Console.ReadLine();
+int index = Array.IndexOf(names, searchString);
+Console.WriteLine(index);
 
-
-
-
-//static int validateInput(int x)
-//{
-//    Console.WriteLine("Please select a student by number (1-16)");
-//    int selection = int.Parse(Console.ReadLine()) - 1;
-//    if (selection > 0 || selection <= 16)
-//    {
-//        return selection
-//    }
-//    else
-//    {
-//        Console.WriteLine("Entry invalid. Please try again.");
-//    }
-//}
